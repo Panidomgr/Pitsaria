@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitsaria - Social Media</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/pitsariaSquareLogo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/1be49d33cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="home">
+            <a href="index.html">
+                <img src="images/pitsariaWideLogo.png">
+            </a>
+        </div>
+        <nav>
+            <div id="navContainer">
+                <div class="navItem current-tab">
+                    <a href="info.html">
+                        Πληροφορίες
+                    </a>
+                </div>
+                <div class="navItem">
+                    <a href="fakeMenu.html">
+                        Menu
+                    </a>
+                </div>
+                <div class="navItem">
+                    <a href="sm.html">
+                        Βρείτε Μας
+                    </a>
+                </div>
+            </div>
+            <div id="navButton">
+                <img width="100px" height="100px" src="images/pitsaSlice.png">
+            </div>
+        </nav>
+    </header>
+    <main id="sm">
+            <a href="info/argyBio.html" class="myBoxStyle">
+                <div class="icon">
+                    <i class="fa-solid fa-id-card fa-2x"></i>
+                </div>
+                <div>
+                    <p>Βιογραφικό του Αργυριάδη</p>
+                </div>
+            </a>
+            <a href="info/pitsariaInfo.html" class="myBoxStyle">
+                <div class="icon">
+                    <i class="fa-solid fa-pizza-slice fa-2x"></i>
+                </div>
+                <div>
+                    <p>Πληροφορίες για την Πιτσαρία</p>
+                </div>
+            </a>
+            <a style="cursor: pointer;" onclick="alert(`Manager cannot allow you to do that!`)" class="myBoxStyle">
+                <div class="icon">
+                    <i class="fa-solid fa-user-secret fa-2x"></i>
+                </div>
+                <div>
+                    <p>Βιογραφικό του Manager</p>
+                </div>
+            </a>
+    </main>
+</body>
+</html>
