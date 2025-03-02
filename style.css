@@ -88,6 +88,10 @@ nav {
     border: 5px dotted hsl(0, 80%, 50%);
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 #entorButton > div {
     width: 50%;
     height: 150px;
