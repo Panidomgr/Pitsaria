@@ -28,12 +28,14 @@ nav {
     display: flex;
     gap: 20px;
     margin-right: 20px;
+    flex-wrap: wrap-reverse;
 }
 
 #navContainer {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .navItem {
@@ -62,10 +64,19 @@ nav {
     border-radius: 10px;
     background-color: hsl(0, 60%, 40%, 0);
     padding: 3px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 #navButton img:hover {
     background-color: hsla(0, 60%, 40%, 0.25);
+}
+
+#navButton {
+    max-width: 106px;
+    max-height: 106px;
+    aspect-ratio: 1 / 1;
 }
 
 .nav-item-visible {
@@ -100,11 +111,29 @@ nav {
     align-items: center;
 }
 
+#entorButton h1 {
+    flex-shrink: 1;
+}
+
+@media(max-width: 550px) {
+    #entorButton > div {
+        min-width: 120px;
+        font-size: 1em;
+        overflow: hidden;
+    }
+}
+
+#home {
+    max-width: 400px;
+}
+
 #home img {
     height: 50px;
     border-radius: 20px;
     background-color: hsl(0, 60%, 40%, 0);
     padding: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 #home img:hover {
