@@ -5,6 +5,21 @@ const pizzaImg = navButton.querySelector("img");
 
 let isOpen = false;
 
+function disableAllLinks() {
+    document.querySelectorAll("#navContainer a").forEach(link => {
+        link.classList.add("disabled");
+    });
+}
+  
+function enableAllLinks() {
+    document.querySelectorAll("#navContainer a").forEach(link => {
+        link.classList.remove("disabled");
+    });
+}
+
+disableAllLinks();
+
+
 navButton.addEventListener("click", () => {
     isOpen = !isOpen;
 
@@ -12,6 +27,7 @@ navButton.addEventListener("click", () => {
         navContainer.style.display = "flex"; // Make sure it's visible
         setTimeout(() => {
             navContainer.classList.add("nav-visible");
+            enableAllLinks();
             [...navItems].reverse().forEach((item, index) => { // Reverse the order
                 setTimeout(() => {
                     item.style.opacity = "1";
@@ -21,6 +37,7 @@ navButton.addEventListener("click", () => {
         }, 10);
     } else {
         navContainer.classList.remove("nav-visible");
+        disableAllLinks();
         navItems.forEach((item) => {
             item.style.opacity = "0";
             item.style.transform = "translateY(-50px)";
