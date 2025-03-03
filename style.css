@@ -449,3 +449,7 @@ main#bio .myBoxStyle:nth-child(even) {
 a.myBoxStyle:hover {
     background-color: hsl(0, 90%, 40%);;
 }
+
+.myBoxStyle p {
+    text-align: right;
+}
