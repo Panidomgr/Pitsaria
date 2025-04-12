@@ -232,9 +232,9 @@ main#item {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 1000px;
+    width: 100%;
 }
 
 #item-photos {
