@@ -173,9 +173,11 @@ main#item {
 .menu-item {
     border: 2px dashed hsl(0, 100%, 25%);
     max-width: 150px;
-    height: 220px;
+    min-height: 220px;
     border-radius: 25px;
     background: linear-gradient(135deg, #0033cc, #00ccff, #9900cc);
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .menu-item a {
@@ -309,11 +311,16 @@ main#item {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
 }
 
 #item-info div {
     max-width: 50%;
-} 
+}
+
+#item-info-ingredients li{
+    text-wrap: wrap;
+}
 
 #item-info h3 {
     text-align: center;
@@ -328,11 +335,16 @@ main#item {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
+    align-items: center;
 }
 
 #item-order:hover {
     cursor: pointer;
     background-color: hsl(120, 52%, 25%);
+}
+
+#item-order-price {
+    font-size: 1.5em;
 }
 
 #findMeContainer {
@@ -398,13 +410,13 @@ main#item {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: hsl(0, 0%, 85%);
     padding: 25px;
     overflow: hidden;
     font-size: 2em;
     text-decoration: none;
     flex-shrink: 1;
+    justify-content: space-between;
 }
 
 .myBoxStyle h2 {
