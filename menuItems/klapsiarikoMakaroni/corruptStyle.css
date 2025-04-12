@@ -1,0 +1,113 @@
+.glitch {
+    position: relative;
+    color: rgb(0, 0, 0);
+    animation: glitch 1s infinite;
+}
+  
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 red, -2px 0 cyan;
+    }
+    20% {
+        text-shadow: -2px 0 red, 2px 0 cyan;
+    }
+    40% {
+        text-shadow: 2px 2px red, -2px -2px cyan;
+    }
+    60% {
+        text-shadow: -2px 2px red, 2px -2px cyan;
+    }
+    80% {
+        text-shadow: 2px -2px red, -2px 2px cyan;
+    }
+    100% {
+        text-shadow: 0 0 red, 0 0 cyan;
+    }
+}
+
+.corrupted {
+    filter: contrast(150%) saturate(200%) hue-rotate(30deg) blur(1px);
+    animation: distort 3s infinite ease-in-out;
+}
+  
+@keyframes distort {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.02) rotate(1deg);
+      filter: blur(3px) contrast(200%) hue-rotate(90deg);
+    }
+}
+
+.flicker {
+    animation: flicker 2s infinite;
+}
+  
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0;
+    }
+}
+
+body {
+    cursor:progress;
+}
+
+header {
+    background: linear-gradient(135deg, #ffeb3ba6, #ffd90094);
+    box-shadow: 0 1px 20px rgb(176, 54, 54);
+}
+
+.navItem {
+    background: hsl(50, 73%, 25%);
+    box-shadow: 5px 5px 10px hsl(0, 69%, 14%);
+}
+
+.navItem:hover {
+    background: hsl(250, 100%, 61%);
+}
+
+.navItem a {
+    text-decoration: line-through;
+    color: rgb(164, 0, 0);
+}
+
+#navButton img:hover {
+    background-color: hsla(0, 100%, 66%, 0.567);
+}
+
+main {
+    background: linear-gradient(-69deg, #d1ff3b, #3c00ff, #D32F2F);
+}
+
+#item-photos {
+    border: 5px dotted hsl(124, 27%, 50%);
+    border-radius: 10px;
+}
+
+#item-info-div {
+    border: 5px dotted hsl(0, 35%, 43%);
+    border-radius: 5px;
+}
+
+.item-blurred-photo {
+    border-radius: 0px;
+}
+
+.item-blurred-photo:nth-child(odd) {
+    border: 5px dotted hsla(0, 100%, 50%, 0.664);
+}
+
+.item-blurred-photo:nth-child(even) {
+    border: 5px dotted hsl(286, 99%, 40%);
+}
+
+#item-focused-photo {
+    border: 5px dotted hsl(148, 59%, 44%);
+    border-radius: 100px;
+    padding: 15px;
+}
