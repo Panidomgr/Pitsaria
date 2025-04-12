@@ -164,6 +164,7 @@ main#menu, main#sm, main#bio {
 main#item {
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #main-header h1 {
@@ -238,11 +239,12 @@ main#item {
 }
 
 #item-photos {
-    min-width: 100px;
+    min-width: 25%;
     min-height: 100px;
     border: 5px dotted hsl(0, 100%, 50%);
     border-radius: 25px;
     display: flex;
+    overflow: hidden;
 }
 
 #item-photos * {
@@ -266,7 +268,7 @@ main#item {
 }
 
 #item-info-div {
-    min-width: 100px;
+    min-width: 25%;
     min-height: 100px;
     border: 5px dotted hsl(0, 100%, 50%);
     border-radius: 25px;
@@ -276,12 +278,16 @@ main#item {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    overflow: hidden;
 }
 
 .item-blurred-photo {
     border-radius: 25px;
-    width: 75px;
-    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+    flex-shrink: 1;
+    min-width: 10px;
+    min-height: 10px;
     cursor: pointer;
 }
 
@@ -296,9 +302,24 @@ main#item {
 #item-focused-photo {
     border: 5px dotted hsl(69, 100%, 75%);
     border-radius: 25px;
-    width: 575px;
-    height: 575px;
+    max-width: 575px;
+    max-height: 575px;
     margin: 25px;
+    flex-shrink: 1;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+@media(max-width: 850px) {
+    #item-photos {
+        flex-direction: column-reverse;
+    }
+    #item-gallery {
+        flex-direction: row;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        justify-content: space-evenly;
+    }
 }
 
 #item-name {
