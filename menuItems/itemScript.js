@@ -1,10 +1,22 @@
 //Logic for Item Galleries:
 
-let focusedPhoto = document.getElementById("item-focused-photo").querySelector("img");
-let photoGallery = document.getElementById("item-gallery");
+document.addEventListener("DOMContentLoaded", () => {
+    const thumbnails = document.querySelectorAll(".item-blurred-photo img");
+    const focusedImg = document.querySelector("#item-focused-photo img");
+    const focusedLink = document.querySelector("#item-focused-photo a");
 
-focusedPhoto.src = photoGallery.querySelector("img").src;
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", () => {
+            const newSrc = thumbnail.getAttribute("src");
 
-photoGallery.addEventListener("click", () => {
-    focusedPhoto.src = event.target.src;
+            focusedImg.setAttribute("src", newSrc);
+
+            if (newSrc.includes("_Main")) {
+                const fullSrc = newSrc.replace("_Main", "_Full");
+                focusedLink.setAttribute("href", fullSrc);
+            } else {
+                focusedLink.setAttribute("href", newSrc);
+            }
+        });
+    });
 });
