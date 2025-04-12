@@ -245,6 +245,7 @@ main#item {
     border-radius: 25px;
     display: flex;
     overflow: hidden;
+    padding: 25px;
 }
 
 #item-photos * {
@@ -302,12 +303,11 @@ main#item {
 #item-focused-photo {
     border: 5px dotted hsl(69, 100%, 75%);
     border-radius: 25px;
-    max-width: 575px;
-    max-height: 575px;
-    margin: 25px;
+    width: 575px;
+    max-width: 100%;
+    height: auto;
     flex-shrink: 1;
-    min-width: 50px;
-    min-height: 50px;
+    aspect-ratio: 1/1;
 }
 
 @media(max-width: 850px) {
