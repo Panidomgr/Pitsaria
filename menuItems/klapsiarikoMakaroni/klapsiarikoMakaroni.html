@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pitsaria - Menu</title>
+    <title>Pitsaria - Klapsiariko Makaroni</title>
     <script src="../../script.js" defer></script>
     <script src="../itemScript.js" defer></script>
+    <script src="corruptScript.js" defer></script>
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="corruptStyle.css">
     <link rel="icon" href="../../images/pitsariaSquareLogo.png" type="image/png">
 </head>
 <body>
     <header>
         <div id="home">
             <a href="../../index.html">
-                <img src="../../images/pitsariaWideLogo.png">
+                <img class="corrupted" src="../../images/pitsariaWideLogo.png">
             </a>
         </div>
         <nav>
@@ -24,7 +26,7 @@
                     </a>
                 </div>
                 <div class="navItem">
-                    <a href="../../menu.html">
+                    <a class="glitch" href="../../menu.html">
                         Menu
                     </a>
                 </div>
@@ -43,45 +45,53 @@
         <div id="item-photos">
             <div id="item-gallery">
                 <div class="item-blurred-photo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg/1200px-Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg">
+                    <img src="./images/klapsiarikoMakaroni_Main.jpg">
+                </div>
+                <div class="item-blurred-photo flicker">
+                    <img src="./images/klapsiarikoMakaroni_1.jpg">
                 </div>
                 <div class="item-blurred-photo">
-                    <img src="https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg">
+                    <img src="./images/klapsiarikoMakaroni_2.jpg">
+                </div>
+                <div class="item-blurred-photo corrupted">
+                    <img src="./images/klapsiarikoMakaroni_3.jpg">
                 </div>
                 <div class="item-blurred-photo">
-                    <img src="https://zeo.gr/media/catalog/product/cache/ba2eeff7997aaee1313116b570693183/p/i/pizza_napoletana_30cm_site.jpg">
-                </div>
-                <div class="item-blurred-photo">
-                    <img src="https://www.chilipeppermadness.com/wp-content/uploads/2024/02/Mexican-Pizza-Recipe-SQ.jpg">
-                </div>
-                <div class="item-blurred-photo">
-                    <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/d6c392a84e4f665424d710649452e7f9/Derivates/a6bdb196bee23faef1d8020319c7c64750ef7686.jpg">
+                    <img src="./images/klapsiarikoMakaroni_4.jpg">
                 </div>
             </div>
-            <div id="item-focused-photo">
-                <img src="">
+            <div id="item-focused-photo" title="Click to zoom in">
+                <a target="_blank" href="./images/klapsiarikoMakaroni_Full.jpg">
+                    <img src="./images/klapsiarikoMakaroni_Main.jpg">
+                </a>
             </div>
         </div>
         <div id="item-info-div">
-            <div id="item-name"><h2>Λύσεις</h2></div>
+            <div class="flicker" id="item-name"><h2>Κλαψιάρικο Μακαρόνι</h2></div>
             <div id="item-info">
                 <div id="item-info-ingredients">
                     <h3>Υλικά</h3>
                     <ol>
-                        <li>Ξύστρες</li>
-                        <li>Μολύβια</li>
-                        <li>Σβήστρες</li>
-                        <li>Λύσεις</li>
+                        <li>Το Μακαρόνι Ελευθερώθηκε</li>
+                        <li class="glitch">Το Μυστικό του Anubis</li>
+                        <li class="flicker">Το Σκότος Σκεπάζει το Φως</li>
+                        <li>The Mystery of the Snake Dragoon</li>
+                        <li>Το Ποριστήρι της Απληστίας</li>
+                        <li>Tha End</li>
+                        <li class="glitchShake">ΤΟ ΤΕΛΟΣ</li>
+                        <li>Η ΙΣΤΟΡΙΑ ΣΥΝΕΧΙΖΕΤΑΙ</li>
+                        <li class="glitch">ANUBIS... IS... COMING...</li>
                     </ol>
                 </div>
                 <div id="item-info-description">
                     <h3>Περιγραφή</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsa cumque totam quo quod cupiditate fugit aperiam delectus maiores eum sint nulla nam asperiores quia placeat ex ab, ad consequuntur.</p>
+                    <p class="glitchText">Το κλαψιάρικο μακαρόνι είναι το τελευταίο κομμάτι της ιστορίας. Παρ’ όλα αυτά, όλα συνεχίζονται. Ο Anubis ΤΩΡΑ κάνει την κίνησή του. Η πίτσα έχει ιστορία της Αρχαία Ελλάδας. Κρύβει τεράστια μυστικά που μόνο ο βασιλιάς Ανούβιος γνωρίζει. ΤΙ ΘΑ ΓΙΝΕΙ ΆΡΑΓΕ ΣΤΗ ΣΥΝΕΧΕΙΑ;</p>
+                    <p>Λέγεται πως αν ρίξεις αυτήν την πίτσα στο έδαφος, αναδύεται ένας κίτρινος καπνός και από μέσα πετάγονται βάτραχοι που κρατούν τρίχες αλόγου και πεθαίνουν αμέσως μετά.</p>
                 </div>
             </div>
-            <div id="item-order" onclick="alert(`Service is currently down!`);">
-                <div id="item-order-button"><b>ORDER NOW</b></div>
-                <div id="item-order-price"><b>2$</b></div>
+            <div id="item-order" onclick="alert(`you do not want to order this one..`);">
+                <div id="item-order-button"><b class="glitch">ORDER NOW</b></div>
+                <div id="item-order-price"><b>2€</b></div>
             </div>
         </div>
     </main>
